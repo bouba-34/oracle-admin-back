@@ -1,5 +1,6 @@
 package com.example.oracleadmin.controller;
 
+import com.example.oracleadmin.dto.ConnParam;
 import com.example.oracleadmin.entity.UserConnection;
 import com.example.oracleadmin.service.ConnectionManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +32,11 @@ public class ConnectionController {
         return connectionService.getAllConnections();
     }
 
-    @DeleteMapping("/{connectionName}")
-    public String deleteConnection(@PathVariable String connectionName) {
-        connectionService.deleteConnectionByName(connectionName);
-        return "Connexion supprimée : " + connectionName;
+    @DeleteMapping("/{id}")
+    public String deleteConnection(@PathVariable Long id) {
+        //connectionService.deleteConnectionByName(id);
+        connectionService.deleteConnectionById(id);
+        return "Connexion supprimée : " + id;
     }
 
     @GetMapping("/user/{clientId}")
@@ -43,8 +45,8 @@ public class ConnectionController {
     }
 
     @PostMapping("/test")
-    public String connectToDatabase(@RequestBody UserConnection request) {
-        try (Connection connection = connectionService.createConnection(request)) {
+    public String connectToDatabase(@RequestBody ConnParam param) {
+        try (Connection connection = connectionService.createConnection(param)) {
             if (connection.isValid(5)) {
                 return "Connexion réussie !";
             } else {
@@ -55,7 +57,7 @@ public class ConnectionController {
         }
     }
 
-    @PostMapping("/execute/{connectionName}")
+    /*@PostMapping("/execute/{connectionName}")
     public String executeActionOnConnection(@PathVariable String connectionName, @RequestBody String sql) {
         UserConnection connectionDetails = connectionService.getConnectionByName(connectionName);
 
@@ -65,6 +67,6 @@ public class ConnectionController {
         } catch (Exception e) {
             return "Erreur : " + e.getMessage();
         }
-    }
+    }*/
 
 }

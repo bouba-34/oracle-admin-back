@@ -1,5 +1,6 @@
 package com.example.oracleadmin.service;
 
+import com.example.oracleadmin.dto.ConnParam;
 import com.example.oracleadmin.entity.UserConnection;
 import com.example.oracleadmin.repository.UserConnectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,20 +38,24 @@ public class ConnectionManagementService {
         return userConnectionRepository.findAllByClientId(clientId);
     }
 
-    public Connection createConnection(UserConnection connectionDetails) throws SQLException {
+    public void deleteConnectionById(Long connectionId) {
+        userConnectionRepository.deleteById(connectionId);
+    }
+
+    public Connection createConnection(ConnParam param) throws SQLException {
         String jdbcUrl = String.format(
                 "jdbc:oracle:thin:@//%s:%s/%s",
-                connectionDetails.getIp(),
-                connectionDetails.getPort(),
-                connectionDetails.getServiceName()
+                param.getIp(),
+                param.getPort(),
+                param.getServiceName()
         );
 
         System.out.println("connection url : " + jdbcUrl);
 
         return DriverManager.getConnection(
                 jdbcUrl,
-                connectionDetails.getUsername() + " as " + connectionDetails.getRole(),
-                connectionDetails.getPassword()
+                param.getUsername() + " as " + param.getRole(),
+                param.getPassword()
         );
     }
 }
