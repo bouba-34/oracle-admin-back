@@ -48,9 +48,9 @@ public class ConnectionController {
     public String connectToDatabase(@RequestBody ConnParam param) {
         try (Connection connection = connectionService.createConnection(param)) {
             if (connection.isValid(5)) {
-                return "Connexion réussie !";
+                return "success";
             } else {
-                return "Échec de la connexion.";
+                return "failed";
             }
         } catch (Exception e) {
             return "Erreur : " + e.getMessage();
