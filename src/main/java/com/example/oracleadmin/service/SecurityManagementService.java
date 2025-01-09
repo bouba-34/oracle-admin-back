@@ -10,7 +10,7 @@ public class SecurityManagementService {
 
     // 1. Configurer une politique de chiffrement TDE
     public void configureTDEPolicy(Connection connection, String tablespaceName, String encryptionAlgorithm) throws SQLException {
-        String tdeQuery = "ALTER TABLESPACE " + tablespaceName + " ENCRYPTION ONLINE USING '" + encryptionAlgorithm +  "' ENCRYPT;";
+        String tdeQuery = "ALTER TABLESPACE " + tablespaceName + " ENCRYPTION ONLINE USING '" + encryptionAlgorithm +  "' ENCRYPT";
 
         try (Statement stmt = connection.createStatement()) {
             stmt.executeUpdate(tdeQuery);

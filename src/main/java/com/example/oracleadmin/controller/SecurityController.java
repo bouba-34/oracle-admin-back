@@ -4,6 +4,7 @@ import com.example.oracleadmin.dto.ConnParam;
 import com.example.oracleadmin.service.SecurityManagementService;
 import com.example.oracleadmin.service.ConnectionManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

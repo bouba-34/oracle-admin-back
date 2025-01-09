@@ -50,11 +50,15 @@ public class ConnectionManagementService {
                 param.getServiceName()
         );
 
-        System.out.println("connection url : " + jdbcUrl);
+        //System.out.println("connection url : " + jdbcUrl);
+
+        String info = param.getUsername().equalsIgnoreCase("sys")  ? param.getUsername() + " as " + param.getRole() : "c##" + param.getUsername() + " as " + (param.getRole().equalsIgnoreCase("sysdba") ? param.getRole() : "c##" + param.getRole());
+
+        System.out.println(info);
 
         return DriverManager.getConnection(
                 jdbcUrl,
-                param.getUsername() + " as " + param.getRole(),
+                info,
                 param.getPassword()
         );
     }

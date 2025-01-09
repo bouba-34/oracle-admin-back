@@ -47,6 +47,7 @@ public class ConnectionController {
     @PostMapping("/test")
     public String connectToDatabase(@RequestBody ConnParam param) {
         try (Connection connection = connectionService.createConnection(param)) {
+            //System.out.println(connection);
             if (connection.isValid(5)) {
                 return "success";
             } else {
