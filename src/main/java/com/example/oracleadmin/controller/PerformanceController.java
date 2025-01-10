@@ -10,19 +10,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
-
 @Controller
 @RequestMapping("/performance")
 public class PerformanceController {
 
     @Autowired
-    private PerformanceService performanceService;
+    private PerformanceService monitoringService;
+
 
     @GetMapping
     public String getPerformance(Model model) {
@@ -31,7 +33,7 @@ public class PerformanceController {
     @GetMapping("/awrReport")
     @ResponseBody
     public ResponseEntity<byte[]> getAwrReport() throws IOException {
-        File awrReport = performanceService.generateAwrReport();
+        File awrReport = monitoringService.generateAwrReport();
         return downloadFile(awrReport);
     }
 
@@ -39,7 +41,7 @@ public class PerformanceController {
     @GetMapping("/ashReport")
     @ResponseBody
     public ResponseEntity<byte[]> getAshReport() throws IOException {
-        File ashReport = performanceService.generateAshReport();
+        File ashReport = monitoringService.generateAshReport();
         return downloadFile(ashReport);
     }
 
@@ -56,7 +58,7 @@ public class PerformanceController {
     @GetMapping("/realtime")
     @ResponseBody
     public Map<String, Object> getRealTimeStats() {
-        return performanceService.getRealTimeStats();
+        return monitoringService.getRealTimeStats();
     }
 
     // Dashboard page
@@ -65,5 +67,4 @@ public class PerformanceController {
         return "performance-dashboard"; // Return the HTML template name
     }
 }
-
 

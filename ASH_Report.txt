@@ -1,0 +1,200 @@
+ASH Report
+===============================
+Sample ID: 78983360386
+Sample Time: 2025-01-10 15:48:42.312
+Session ID: 52
+Session Type: FOREGROUND
+SQL ID: b7wvutrbhf7jg
+SQL Operation: UPSERT
+Wait Event: null
+Parameter 1: FileOperation
+Parameter 2: fileno
+Parameter 3: filetype
+
+Sample ID: 78983360369
+Sample Time: 2025-01-10 15:48:24.631
+Session ID: 165
+Session Type: BACKGROUND
+SQL ID: null
+SQL Operation: null
+Wait Event: null
+Parameter 1: timeout
+Parameter 2: null
+Parameter 3: null
+
+Sample ID: 78983360337
+Sample Time: 2025-01-10 15:47:51.354
+Session ID: 170
+Session Type: BACKGROUND
+SQL ID: null
+SQL Operation: null
+Wait Event: null
+Parameter 1: timeout
+Parameter 2: null
+Parameter 3: null
+
+Sample ID: 78983360218
+Sample Time: 2025-01-10 15:45:47.599
+Session ID: 210
+Session Type: FOREGROUND
+SQL ID: null
+SQL Operation: null
+Wait Event: null
+Parameter 1: Bytes
+Parameter 2: where
+Parameter 3: null
+
+Sample ID: 78983360211
+Sample Time: 2025-01-10 15:45:40.319
+Session ID: 213
+Session Type: FOREGROUND
+SQL ID: d4vs8n5dfpf8x
+SQL Operation: SELECT
+Wait Event: null
+Parameter 1: Bytes
+Parameter 2: where
+Parameter 3: null
+
+Sample ID: 78983360208
+Sample Time: 2025-01-10 15:45:37.209
+Session ID: 210
+Session Type: FOREGROUND
+SQL ID: d4vs8n5dfpf8x
+SQL Operation: SELECT
+Wait Event: null
+Parameter 1: Bytes
+Parameter 2: where
+Parameter 3: null
+
+Sample ID: 78983360200
+Sample Time: 2025-01-10 15:45:28.879
+Session ID: 22
+Session Type: FOREGROUND
+SQL ID: null
+SQL Operation: null
+Wait Event: null
+Parameter 1: timeout
+Parameter 2: null
+Parameter 3: null
+
+Sample ID: 78983360141
+Sample Time: 2025-01-10 15:44:27.521
+Session ID: 165
+Session Type: BACKGROUND
+SQL ID: null
+SQL Operation: null
+Wait Event: null
+Parameter 1: timeout
+Parameter 2: null
+Parameter 3: null
+
+Sample ID: 78983359509
+Sample Time: 2025-01-10 15:33:30.269
+Session ID: 48
+Session Type: FOREGROUND
+SQL ID: b7wvutrbhf7jg
+SQL Operation: UPSERT
+Wait Event: null
+Parameter 1: file number
+Parameter 2: first dba
+Parameter 3: block cnt
+
+Sample ID: 78983359238
+Sample Time: 2025-01-10 15:28:48.443
+Session ID: 48
+Session Type: FOREGROUND
+SQL ID: 730vdzhng6m6g
+SQL Operation: UPDATE
+Wait Event: null
+Parameter 1: Bytes
+Parameter 2: where
+Parameter 3: null
+
+Sample ID: 78983359077
+Sample Time: 2025-01-10 15:26:01.008
+Session ID: 165
+Session Type: BACKGROUND
+SQL ID: null
+SQL Operation: null
+Wait Event: null
+Parameter 1: timeout
+Parameter 2: null
+Parameter 3: null
+
+Sample ID: 78983358632
+Sample Time: 2025-01-10 15:18:18.225
+Session ID: 207
+Session Type: FOREGROUND
+SQL ID: b7wvutrbhf7jg
+SQL Operation: UPSERT
+Wait Event: null
+Parameter 1: file number
+Parameter 2: first dba
+Parameter 3: block cnt
+
+Sample ID: 78983358396
+Sample Time: 2025-01-10 15:14:12.793
+Session ID: 210
+Session Type: FOREGROUND
+SQL ID: fdkp37h08xx0p
+SQL Operation: SELECT
+Wait Event: null
+Parameter 1: Bytes
+Parameter 2: where
+Parameter 3: null
+
+Sample ID: 78983358110
+Sample Time: 2025-01-10 15:09:15.365
+Session ID: 22
+Session Type: FOREGROUND
+SQL ID: a6b4pz5vv5cn1
+SQL Operation: SELECT
+Wait Event: null
+Parameter 1: timeout
+Parameter 2: null
+Parameter 3: null
+
+Sample ID: 78983357785
+Sample Time: 2025-01-10 15:03:37.377
+Session ID: 165
+Session Type: BACKGROUND
+SQL ID: null
+SQL Operation: null
+Wait Event: null
+Parameter 1: timeout
+Parameter 2: null
+Parameter 3: null
+
+Sample ID: 78983357464
+Sample Time: 2025-01-10 14:58:03.548
+Session ID: 34
+Session Type: BACKGROUND
+SQL ID: 96nuch418m4tt
+SQL Operation: INSERT
+Wait Event: null
+Parameter 1: file#
+Parameter 2: block#
+Parameter 3: blocks
+
+Sample ID: 78983357463
+Sample Time: 2025-01-10 14:58:02.508
+Session ID: 34
+Session Type: BACKGROUND
+SQL ID: 3pd1h4vyamdbq
+SQL Operation: INSERT
+Wait Event: null
+Parameter 1: file#
+Parameter 2: block#
+Parameter 3: blocks
+
+Sample ID: 78983357034
+Sample Time: 2025-01-10 14:50:36.365
+Session ID: 167
+Session Type: BACKGROUND
+SQL ID: null
+SQL Operation: null
+Wait Event: null
+Parameter 1: timeout
+Parameter 2: null
+Parameter 3: null
+

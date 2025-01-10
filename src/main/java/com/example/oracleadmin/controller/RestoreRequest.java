@@ -1,10 +1,8 @@
 package com.example.oracleadmin.controller;
 
 public class RestoreRequest {
-
     private String restoreDate;
 
-    // Getter et Setter
     public String getRestoreDate() {
         return restoreDate;
     }

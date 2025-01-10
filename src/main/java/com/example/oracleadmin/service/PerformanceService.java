@@ -1,16 +1,19 @@
 package com.example.oracleadmin.service;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class PerformanceService {
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
